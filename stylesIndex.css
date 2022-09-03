@@ -1,0 +1,109 @@
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-image: url(assets/homePage.PNG);
+	background-size: cover;
+}
+
+h3 {
+	padding-bottom: 20px;
+	text-align: center;
+	color: #8a8880;
+	margin-bottom: 30px;
+}
+
+p {
+	margin-top: 20px;
+	text-align: center;
+	color: rgb(137, 23, 23);
+}
+
+.page-content {
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.book-shelf {
+	max-width: 350px;
+	display: flex;
+	flex-direction: column;
+}
+
+.left {
+	width: 400px;
+}
+
+.right {
+	width: 400px;
+	height: 400px;
+}
+
+/* accordion styles */
+
+.accordion-button {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background: #7d674f;
+	color: white;
+	text-align: left;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.accordion-button::after {
+	content: "\25be";
+	float: right;
+	transform: scale(1.5);
+}
+
+.accordion-button--active {
+	background-color: #42362a;
+}
+
+.accordion-button--active::after {
+	content: "\25b4";
+}
+
+.accordion-button:hover {
+	background-color: #42362a;
+}
+
+.accordion-content {
+	width: 90%;
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 0s;
+	padding: 0 15px;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+	.half {
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	h3 {
+		font-size: 12px;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.book-shelf {
+		margin: 5px;
+	}
+
+	.left {
+		margin: 5px;
+	}
+
+	.right {
+		margin: 5px;
+	}
+}
